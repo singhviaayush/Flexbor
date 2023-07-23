@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Flexbox</title>
+        <style>
+            .container {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                height: 70vh;
+                justify-content: space-around;                
+            }
+
+            div div {
+                background-color: rgb(207, 203, 203);                              
+                width: 400px;
+                height: 200px;
+            }
+
+            h2,p {
+                text-align: center;
+            }
+
+            @media (max-width: 750px) {
+                .container {
+                    display: inline-flex;
+                    flex-direction: column; 
+                    align-items: center; 
+                    height: 80vh;            
+                }
+
+                .container *{
+                    flex: 1;
+                } 
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Our subscription Plans</h1>
+        <div class="container">
+            <div class="first">
+                <h2>Basic</h2>
+                <p>$ 9.99 / month</p>
+                <ul>
+                    <li>✅ 10 GB Storage</li>
+                    <li>✅ 1 User</li>
+                    <li>✅ Support</li>
+                </ul>
+            </div>
+            <div class="second">
+                <h2>Standard</h2>
+                <p>$ 19.99 / month</p>
+                <ul>
+                    <li>✅ 100 GB Storage</li>
+                    <li>✅ 5 User</li>
+                    <li>✅ Phone & Email Support</li>
+            </div>
+            <div class="third">
+                <h2>Premium</h2>
+                <p>$ 49.99 / month</p>
+                <ul>
+                    <li>✅ 200 GB Storage</li>
+                    <li>✅ 10 User</li>
+                    <li>✅ 24/7 Support</li>
+            </div>
+        </div>
+    </body>
+   
+</html>
